@@ -5,5 +5,8 @@ services:
     image: mongo
     restart: always
     environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: supersafe
+      MONGODB_USER: root
+      MONGODB_PASS: supersafe
+      MONGODB_DATABASE: urlshortener
+    ports:
+     - "12345:27017"
